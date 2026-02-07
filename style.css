@@ -37,18 +37,17 @@ button {
 button:hover {
     background: #ff1f5a;
 }
-
-.music-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.music-inside {
     background: #ff4b7d;
-    color: white;
     border: none;
-    padding: 10px 14px;
-    border-radius: 50px;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 20px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
+
 
 .photos {
     display: flex;
@@ -69,6 +68,7 @@ button:hover {
     position: relative;
     transition: transform 0.2s;
 }
+
 
 
 
