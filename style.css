@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .card {
@@ -12,13 +13,12 @@ body {
     padding: 25px;
     border-radius: 20px;
     text-align: center;
-    width: 320px;
+    width: 330px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 img {
     width: 250px;
-    height: auto;
     border-radius: 15px;
     margin: 15px 0;
 }
@@ -31,11 +31,13 @@ button {
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
+    margin: 5px;
 }
 
 button:hover {
     background: #ff1f5a;
 }
+
 .music-btn {
     position: fixed;
     bottom: 20px;
@@ -47,9 +49,27 @@ button:hover {
     border-radius: 50px;
     cursor: pointer;
 }
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.photos img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* NO button movement */
 #noBtn {
     position: relative;
-    transition: 0.2s;
+    transition: transform 0.2s;
 }
+
+
 
 
