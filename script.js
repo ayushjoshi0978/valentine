@@ -1,3 +1,7 @@
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
 function showLove() {
     const days = [
         {
@@ -37,30 +41,29 @@ function showLove() {
         },
         {
             title: "Valentine’s Day ❤️",
-            msg: "YouI love you more than all the code I’ll ever write ❤️",
+            msg: "I love you more than all the code I’ll ever write ❤️",
             gif: "https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif"
         }
     ];
 
-    const today = new Date().getDate() - 7; // Feb 7 → index 0
-    const d = days[Math.min(Math.max(today, 0), days.length - 1)];
+    const today = new Date();
+    const index = today.getDate() - 7;
+
+    const d = days[Math.min(Math.max(index, 0), days.length - 1)];
 
     document.getElementById("dayTitle").innerText = d.title;
     document.getElementById("message").innerText = d.msg;
     document.getElementById("gif").src = d.gif;
 }
-function playMusic() {
-    document.getElementById("bgMusic").play();
-}
-// Auto open final page only on Feb 14
-const today = new Date();
-const date = today.getDate();
-const month = today.getMonth(); // Feb = 1
 
-if (date === 14 && month === 1) {
+/* Auto open final page only on Feb 14 */
+const today = new Date();
+if (today.getDate() === 14 && today.getMonth() === 1) {
     setTimeout(() => {
         window.location.href = "final.html";
-    }, 3000); // opens after 3 seconds
+    }, 3000);
 }
+
+
 
 
