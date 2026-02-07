@@ -16,14 +16,29 @@
 </div>
 
 <script>
+<button onclick="yes()">YES 💖</button>
+
+
+<button id="noBtn">NO 🙈</button>
+
+}
+</script>
+    <script>
 function yes() {
     alert("Yayyy!!! You made me the happiest coder ever ❤️");
 }
 
-function no() {
-    alert("Error 404: NO not allowed 😤💘");
-}
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
 </script>
+
 
 </body>
 </html>
+
