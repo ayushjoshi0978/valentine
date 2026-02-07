@@ -63,7 +63,22 @@ if (today.getDate() === 14 && today.getMonth() === 1) {
         window.location.href = "final.html";
     }, 3000);
 }
+let isPlaying = false;
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
+function toggleMusic() {
+    if (!isPlaying) {
+        music.play();
+        musicBtn.innerText = "⏸️ Stop Music";
+        isPlaying = true;
+    } else {
+        music.pause();
+        music.currentTime = 0; // reset
+        musicBtn.innerText = "▶️ Play Music";
+        isPlaying = false;
+    }
+}
 
 
 
