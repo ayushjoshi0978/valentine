@@ -9,36 +9,46 @@
 
 <div class="card">
     <h1>Will you be my Valentine forever? ❤️</h1>
+
     <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+
     <br><br>
+
     <button onclick="yes()">YES 💖</button>
-    <button onclick="no()">NO 🙈</button>
+    <button id="noBtn">NO 🙈</button>
 </div>
 
 <script>
-<button onclick="yes()">YES 💖</button>
-
-
-<button id="noBtn">NO 🙈</button>
-
-}
-</script>
-    <script>
 function yes() {
     alert("Yayyy!!! You made me the happiest coder ever ❤️");
 }
 
 const noBtn = document.getElementById("noBtn");
+let scale = 1;
 
-noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * 200 - 100;
-    const y = Math.random() * 200 - 100;
+function moveNoButton() {
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 300 - 150;
 
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
+    scale -= 0.1;
+    if (scale < 0.4) scale = 0.4;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+
+    if (navigator.vibrate) {
+        navigator.vibrate(100);
+    }
+}
+
+noBtn.addEventListener("mouseover", moveNoButton);
+noBtn.addEventListener("touchstart", moveNoButton);
 </script>
+
+</body>
+</html>
 
 
 </body>
 </html>
+
 
