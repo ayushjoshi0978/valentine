@@ -52,3 +52,15 @@ function showLove() {
 function playMusic() {
     document.getElementById("bgMusic").play();
 }
+// Auto open final page only on Feb 14
+const today = new Date();
+const date = today.getDate();
+const month = today.getMonth(); // Feb = 1
+
+if (date === 14 && month === 1) {
+    setTimeout(() => {
+        window.location.href = "final.html";
+    }, 3000); // opens after 3 seconds
+}
+
+
